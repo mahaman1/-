@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANZI - 혁신적인 IT 솔루션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #06b6d4;
+            text-decoration: none;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #06b6d4; }
+            to { text-shadow: 0 0 20px #06b6d4, 0 0 30px #06b6d4; }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #06b6d4;
+            background: rgba(6, 182, 212, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.5);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #1e293b;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8fafc;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .about-text h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-visual {
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .about-visual:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.3);
+        }
+
+        .core-values {
+            margin-top: 2rem;
+        }
+
+        .core-value {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .core-value:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team {
+            background: #f8fafc;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+        }
+
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            color: #06b6d4;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #06b6d4;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #06b6d4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Chat Section */
+        .chat-section {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .chat-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .chat-header h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            animation: messageSlideIn 0.3s ease-out;
+        }
+
+        @keyframes messageSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            text-align: right;
+        }
+
+        .message.admin {
+            text-align: left;
+        }
+
+        .message-bubble {
+            display: inline-block;
+            max-width: 70%;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            word-wrap: break-word;
+        }
+
+        .message.user .message-bubble {
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            color: white;
+        }
+
+        .message.admin .message-bubble {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .message-info {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 0.3rem;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            resize: none;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #06b6d4;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .chat-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .chat-send-btn {
+            padding: 1rem 1.5rem;
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+        }
+
+        .quick-questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .quick-question {
+            padding: 0.5rem 1rem;
+            background: rgba(6, 182, 212, 0.2);
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            border-radius: 20px;
+            color: #06b6d4;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .quick-question:hover {
+            background: rgba(6, 182, 212, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #06b6d4;
+            border-radius: 50%;
+            animation: typingDot 1.4s ease-in-out infinite both;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typingDot {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">MANZI</a>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">회사소개</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#team">조직도</a></li>
+                <li><a href="#contact">연락처</a></li>
+                <li><a href="#chat">문의</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>MANZI</h1>
+            <p>혁신적인 IT 솔루션으로 미래를 선도합니다</p>
+            <a href="#contact" class="cta-button">프로젝트 시작하기</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h2 class="fade-in">회사 소개</h2>
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <h3>💡 MANZI와 함께하는 디지털 혁신</h3>
+                <p>MANZI는 최첨단 기술과 창의적인 아이디어를 결합하여 고객의 비즈니스 성장을 이끌어내는 IT 전문 기업입니다.</p>
+                <p>우리는 웹 개발, 모바일 앱 개발, 클라우드 솔루션, AI/머신러닝 등 다양한 분야에서 전문성을 갖추고 있으며, 각 프로젝트마다 최적화된 솔루션을 제공합니다.</p>
+                <p>고객의 성공이 곧 우리의 성공이라는 신념으로, 끊임없는 혁신과 품질 향상에 매진하고 있습니다.</p>
+            </div>
+            <div class="about-visual fade-in">
+                <h3>핵심 가치</h3>
+                <div class="core-values">
+                    <div class="core-value">🚀 혁신적인 기술</div>
+                    <div class="core-value">💎 최고의 품질</div>
+                    <div class="core-value">🤝 고객 만족</div>
+                    <div class="core-value">⚡ 빠른 실행력</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2 class="fade-in">주요 서비스</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">💻</div>
+                <h3>웹 개발</h3>
+                <p>반응형 웹사이트부터 복잡한 웹 애플리케이션까지, 최신 기술 스택을 활용한 맞춤형 웹 솔루션을 제공합니다.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">📱</div>
+                <h3>모바일 앱 개발</h3>
+                <p>iOS, Android 네이티브 앱 개발부터 크로스 플랫폼 앱까지, 사용자 경험을 최우선으로 하는 모바일 솔루션을 구축합니다.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">☁️</div>
+                <h3>클라우드 솔루션</h3>
+                <p>AWS, Azure, GCP 등 주요 클라우드 플랫폼을 활용한 확장 가능하고 안정적인 인프라 구축 및 관리 서비스를 제공합니다.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🤖</div>
+                <h3>AI/머신러닝</h3>
+                <p>데이터 분석부터 머신러닝 모델 개발까지, AI 기술을 활용한 비즈니스 인텔리전스 솔루션을 제공합니다.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">🔒</div>
+                <h3>보안 솔루션</h3>
+                <p>사이버 보안 컨설팅부터 보안 시스템 구축까지, 디지털 자산을 안전하게 보호하는 종합 보안 서비스를 제공합니다.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">📊</div>
+                <h3>데이터 분석</h3>
+                <p>빅데이터 처리, 비즈니스 인텔리전스, 데이터 시각화 등을 통해 데이터 기반 의사결정을 지원합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+        <h2 class="fade-in">조직도</h2>
+        <div class="team-grid">
+            <div class="team-member fade-in">
+                <div class="member-avatar">
+                    <img src="https://postfiles.pstatic.net/MjAyNTA2MDhfMjc3/MDAxNzQ5Mzk0NTU4NTU0.REVtBk7BDuKaKQQv-Ri9wa1D8i8AdTEcOhqNfCiBgGMg.e_wUkUZYxwZNNeoUjLxgTX4Bv5d-ylupeV5J53cAiv8g.PNG/%EC%9D%B4%EC%A0%9C%ED%98%95.png?type=w580" alt="이제형 대표이사">
+                </div>
+                <h3 class="member-name">이제형</h3>
+                <p class="member-title">대표이사</p>
+            </div>
+            <div class="team-member fade-in">
+                <div class="member-avatar">
+                    <img src="https://postfiles.pstatic.net/MjAyNTA2MDhfNjYg/MDAxNzQ5Mzk0NTE2MDY2.ezL5aNeiEdEvGB9oEPykM88tEQon8jz2_LGMGhtsohgg.Pv3ZPvp2nLndA68wgCHx9L9tb4k_Hh24J6ESKJ9peQog.PNG/%EB%B0%95%ED%83%9C%EC%98%81.png?type=w3840" alt="박태영 부사장">
+                </div>
+                <h3 class="member-name">박태영</h3>
+                <p class="member-title">부사장</p>
+            </div>
+            <div class="team-member fade-in">
+                <div class="member-avatar">
+                    <img src="https://postfiles.pstatic.net/MjAyNTA2MDhfNzgg/MDAxNzQ5Mzk0NTgzOTk1.FWYyttoYUnNZFcIjyKToNJA-CE9br1VT3UT3SyrqsfAg._NPo_ielo9-5fw90a0aFNkD2P5McgYa_6QTV_1KJH3kg.PNG/%EA%B9%80%EC%A7%80%EC%9B%85.png?type=w580" alt="김지웅 상무">
+                </div>
+                <h3 class="member-name">김지웅</h3>
+                <p class="member-title">상무</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="fade-in">연락처</h2>
+        <div class="contact-content">
+            <div class="contact-form fade-in">
+                <h3>프로젝트 문의</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">회사명</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">프로젝트 내용</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">문의하기</button>
+                </form>
+            </div>
+            <div class="contact-info fade-in">
+                <h3>연락 정보</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>이메일</h4>
+                        <p>info@manzi.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>전화번호</h4>
+                        <p>031-321-5678</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>주소</h4>
+                        <p>경기도 용인시 처인구<br>원삼면 이원로 1072번지2</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <h4>업무시간</h4>
+                        <p>평일 09:00 - 18:00<br>주말 및 공휴일 휴무</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Chat Board Section -->
+    <section id="chat" class="section chat-section">
+        <h2 class="fade-in">실시간 문의</h2>
+        <div class="chat-container fade-in">
+            <div class="chat-header">
+                <h3>💬 MANZI 상담센터</h3>
+                <p>궁금한 점이 있으시면 언제든지 문의해 주세요!</p>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message admin">
+                    <div class="message-bubble">
+                        안녕하세요! MANZI입니다. 🙋‍♂️<br>
+                        어떤 도움이 필요하신가요?
+                    </div>
+                    <div class="message-info">MANZI 상담원 • 방금 전</div>
+                </div>
+            </div>
+            
+            <div class="typing-indicator" id="typingIndicator">
+                <span>상담원이 입력 중</span>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <textarea 
+                    class="chat-input" 
+                    id="chatInput" 
+                    placeholder="메시지를 입력해주세요..."
+                    rows="1"
+                ></textarea>
+                <button class="chat-send-btn" id="sendBtn">
+                    전송 🚀
+                </button>
+            </div>
+            
+            <div class="quick-questions">
+                <div class="quick-question" data-question="웹 개발 비용이 궁금해요">💻 웹 개발 비용</div>
+                <div class="quick-question" data-question="모바일 앱 개발 기간은 얼마나 걸리나요?">📱 앱 개발 기간</div>
+                <div class="quick-question" data-question="클라우드 서비스에 대해 알려주세요">☁️ 클라우드 서비스</div>
+                <div class="quick-question" data-question="포트폴리오를 보고 싶어요">📂 포트폴리오</div>
+                <div class="quick-question" data-question="상담 예약하고 싶어요">📅 상담 예약</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section">
+            <p>&copy; 2024 MANZI. All rights reserved. | 혁신적인 IT 솔루션의 선두주자</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar transparency on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(6, 182, 212, 0.2)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.style.transform = 'scale(0.95)';
+            submitBtn.innerHTML = '전송 중...';
+            
+            setTimeout(() => {
+                submitBtn.style.transform = 'scale(1)';
+                submitBtn.innerHTML = '문의하기';
+                alert('문의해 주셔서 감사합니다! 빠른 시일 내에 연락드리겠습니다.');
+                this.reset();
+            }, 2000);
+        });
+
+        // Interactive Chat Board Functionality
+        class ChatBoard {
+            constructor() {
+                this.chatMessages = document.getElementById('chatMessages');
+                this.chatInput = document.getElementById('chatInput');
+                this.sendBtn = document.getElementById('sendBtn');
+                this.typingIndicator = document.getElementById('typingIndicator');
+                this.quickQuestions = document.querySelectorAll('.quick-question');
+                
+                this.responses = {
+                    '웹 개발 비용이 궁금해요': '웹 개발 비용은 프로젝트 규모와 요구사항에 따라 달라집니다. 💰\n\n기본 웹사이트: 300만원~500만원\n중급 웹사이트: 500만원~1000만원\n고급 웹사이트: 1000만원 이상\n\n정확한 견적을 위해 무료 상담을 받아보세요!',
+                    '모바일 앱 개발 기간은 얼마나 걸리나요?': '모바일 앱 개발 기간은 앱의 복잡도에 따라 결정됩니다. ⏰\n\n간단한 앱: 2-3개월\n중간 복잡도 앱: 3-6개월\n복잡한 앱: 6개월 이상\n\n기획, 디자인, 개발, 테스트 단계를 거쳐 진행됩니다.',
+                    '클라우드 서비스에 대해 알려주세요': '저희는 AWS, Azure, GCP 등 주요 클라우드 플랫폼을 지원합니다. ☁️\n\n✅ 서버 구축 및 관리\n✅ 데이터베이스 설계\n✅ 보안 설정\n✅ 모니터링 및 백업\n✅ 24/7 기술 지원\n\n클라우드 마이그레이션도 도와드립니다!',
+                    '포트폴리오를 보고 싶어요': '다양한 프로젝트 경험을 보유하고 있습니다! 📂\n\n🏢 대기업 웹사이트 리뉴얼\n📱 모바일 앱 개발 (iOS/Android)\n🛒 이커머스 플랫폼 구축\n🏥 병원 관리 시스템\n🏫 교육 플랫폼 개발\n\n자세한 포트폴리오는 이메일로 요청해 주세요!',
+                    '상담 예약하고 싶어요': '상담 예약을 원하시는군요! 📅\n\n📞 전화: 031-321-5678\n📧 이메일: info@manzi.com\n🕐 상담 시간: 평일 09:00-18:00\n\n또는 위의 연락처 폼을 작성해 주시면 빠르게 연락드리겠습니다!'
+                };
+                
+                this.init();
+            }
+
+            init() {
+                this.sendBtn.addEventListener('click', () => this.sendMessage());
+                this.chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+
+                this.quickQuestions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const questionText = question.getAttribute('data-question');
+                        this.chatInput.value = questionText;
+                        this.sendMessage();
+                    });
+                });
+
+                // Auto-resize textarea
+                this.chatInput.addEventListener('input', () => {
+                    this.chatInput.style.height = 'auto';
+                    this.chatInput.style.height = this.chatInput.scrollHeight + 'px';
+                });
+            }
+
+            sendMessage() {
+                const message = this.chatInput.value.trim();
+                if (!message) return;
+
+                // Add user message
+                this.addMessage(message, 'user');
+                this.chatInput.value = '';
+                this.chatInput.style.height = 'auto';
+
+                // Show typing indicator
+                this.showTyping();
+
+                // Simulate response delay
+                setTimeout(() => {
+                    this.hideTyping();
+                    this.generateResponse(message);
+                }, Math.random() * 2000 + 1000);
+            }
+
+            addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('ko-KR', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+
+                messageDiv.innerHTML = `
+                    <div class="message-bubble">${text.replace(/\n/g, '<br>')}</div>
+                    <div class="message-info">${sender === 'user' ? '나' : 'MANZI 상담원'} • ${timeString}</div>
+                `;
+
+                this.chatMessages.appendChild(messageDiv);
+                this.scrollToBottom();
+            }
+
+            generateResponse(userMessage) {
+                let response = this.findBestResponse(userMessage);
+                
+                if (!response) {
+                    response = this.getDefaultResponse(userMessage);
+                }
+
+                this.addMessage(response, 'admin');
+            }
+
+            findBestResponse(message) {
+                const lowerMessage = message.toLowerCase();
+                
+                for (const [key, response] of Object.entries(this.responses)) {
+                    const keyWords = key.toLowerCase().split(' ');
+                    if (keyWords.some(keyword => lowerMessage.includes(keyword))) {
+                        return response;
+                    }
+                }
+
+                // Check for specific keywords
+                if (lowerMessage.includes('안녕') || lowerMessage.includes('hello')) {
+                    return '안녕하세요! 😊 MANZI에 관심을 가져주셔서 감사합니다. 어떤 도움이 필요하신가요?';
+                }
+                
+                if (lowerMessage.includes('가격') || lowerMessage.includes('비용') || lowerMessage.includes('견적')) {
+                    return this.responses['웹 개발 비용이 궁금해요'];
+                }
+                
+                if (lowerMessage.includes('기간') || lowerMessage.includes('시간')) {
+                    return this.responses['모바일 앱 개발 기간은 얼마나 걸리나요?'];
+                }
+                
+                if (lowerMessage.includes('AI') || lowerMessage.includes('인공지능') || lowerMessage.includes('머신러닝')) {
+                    return 'AI/머신러닝 분야의 전문성을 보유하고 있습니다! 🤖\n\n✅ 데이터 분석 및 예측 모델\n✅ 자연어 처리 (NLP)\n✅ 컴퓨터 비전\n✅ 추천 시스템\n✅ 챗봇 개발\n\n구체적인 AI 프로젝트가 있으시다면 상담받아보세요!';
+                }
+
+                return null;
+            }
+
+            getDefaultResponse(message) {
+                const defaultResponses = [
+                    '좋은 질문이네요! 😊 더 자세한 상담을 위해 전화나 이메일로 연락해 주시면 전문 상담원이 도움을 드리겠습니다.',
+                    '감사합니다! 구체적인 내용은 무료 상담을 통해 자세히 안내해 드릴게요. 연락처를 남겨주시면 빠르게 연락드리겠습니다.',
+                    '관심을 가져주셔서 감사합니다! 🙏 프로젝트 세부사항에 따라 답변이 달라질 수 있어서, 직접 상담을 받아보시는 것을 추천드려요.',
+                    '좋은 아이디어네요! 💡 MANZI가 도움을 드릴 수 있을 것 같습니다. 상담 예약을 하시거나 연락처 폼을 작성해 주세요!'
+                ];
+                
+                return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+            }
+
+            showTyping() {
+                this.typingIndicator.style.display = 'flex';
+                this.scrollToBottom();
+            }
+
+            hideTyping() {
+                this.typingIndicator.style.display = 'none';
+            }
+
+            scrollToBottom() {
+                setTimeout(() => {
+                    this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+                }, 100);
+            }
+        }
+
+        // Initialize chat board when page loads
+        window.addEventListener('load', () => {
+            new ChatBoard();
+        });
+    </script>
+</body>
+</html>
