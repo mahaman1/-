@@ -164,270 +164,6 @@
             border-radius: 2px;
         }
 
-        /* About Section */
-        .about {
-            background: #f8fafc;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #475569;
-        }
-
-        .about-text h3 {
-            color: #1e293b;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .about-visual {
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
-            border-radius: 20px;
-            padding: 3rem;
-            color: white;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .about-visual:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.3);
-        }
-
-        .core-values {
-            margin-top: 2rem;
-        }
-
-        .core-value {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .core-value:hover {
-            transform: translateX(10px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(45deg, #06b6d4, #3b82f6);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #06b6d4, #3b82f6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .service-card h3 {
-            color: #1e293b;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .service-card p {
-            color: #64748b;
-            line-height: 1.6;
-        }
-
-        /* Team Section */
-        .team {
-            background: #f8fafc;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .team-member {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .member-avatar {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(45deg, #06b6d4, #3b82f6);
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
-        }
-
-        .member-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .member-name {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .member-title {
-            color: #06b6d4;
-            font-weight: 600;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #06b6d4;
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, #06b6d4, #3b82f6);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
-        }
-
-        .contact-info {
-            background: linear-gradient(135deg, #1e293b, #334155);
-            padding: 2rem;
-            border-radius: 15px;
-            color: white;
-        }
-
-        .contact-info h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            gap: 1rem;
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: #06b6d4;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
         /* Chat Section */
         .chat-section {
             background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -623,6 +359,76 @@
             }
         }
 
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            z-index: 10000;
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .notification.error {
+            background: linear-gradient(45deg, #ef4444, #dc2626);
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+        }
+
+        .kakao-status {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .kakao-connect-btn {
+            background: #FEE500;
+            color: #000;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .kakao-connect-btn:hover {
+            background: #FFEB00;
+            transform: translateY(-2px);
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .status-connected {
+            background: #10b981;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .status-disconnected {
+            background: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+
         /* Footer */
         .footer {
             background: #0f172a;
@@ -643,12 +449,6 @@
             
             .hero p {
                 font-size: 1.2rem;
-            }
-            
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
             }
             
             .section h2 {
@@ -693,177 +493,11 @@
         <div class="hero-content">
             <h1>MANZI</h1>
             <p>혁신적인 IT 솔루션으로 미래를 선도합니다</p>
-            <a href="#contact" class="cta-button">프로젝트 시작하기</a>
+            <a href="#chat" class="cta-button">실시간 문의하기</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <h2 class="fade-in">회사 소개</h2>
-        <div class="about-content">
-            <div class="about-text fade-in">
-                <h3>💡 MANZI와 함께하는 디지털 혁신</h3>
-                <p>MANZI는 최첨단 기술과 창의적인 아이디어를 결합하여 고객의 비즈니스 성장을 이끌어내는 IT 전문 기업입니다.</p>
-                <p>우리는 웹 개발, 모바일 앱 개발, 클라우드 솔루션, AI/머신러닝 등 다양한 분야에서 전문성을 갖추고 있으며, 각 프로젝트마다 최적화된 솔루션을 제공합니다.</p>
-                <p>고객의 성공이 곧 우리의 성공이라는 신념으로, 끊임없는 혁신과 품질 향상에 매진하고 있습니다.</p>
-            </div>
-            <div class="about-visual fade-in">
-                <h3>핵심 가치</h3>
-                <div class="core-values">
-                    <div class="core-value">🚀 혁신적인 기술</div>
-                    <div class="core-value">💎 최고의 품질</div>
-                    <div class="core-value">🤝 고객 만족</div>
-                    <div class="core-value">⚡ 빠른 실행력</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <h2 class="fade-in">주요 서비스</h2>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <div class="service-icon">💻</div>
-                <h3>웹 개발</h3>
-                <p>반응형 웹사이트부터 복잡한 웹 애플리케이션까지, 최신 기술 스택을 활용한 맞춤형 웹 솔루션을 제공합니다.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">📱</div>
-                <h3>모바일 앱 개발</h3>
-                <p>iOS, Android 네이티브 앱 개발부터 크로스 플랫폼 앱까지, 사용자 경험을 최우선으로 하는 모바일 솔루션을 구축합니다.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">☁️</div>
-                <h3>클라우드 솔루션</h3>
-                <p>AWS, Azure, GCP 등 주요 클라우드 플랫폼을 활용한 확장 가능하고 안정적인 인프라 구축 및 관리 서비스를 제공합니다.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">🤖</div>
-                <h3>AI/머신러닝</h3>
-                <p>데이터 분석부터 머신러닝 모델 개발까지, AI 기술을 활용한 비즈니스 인텔리전스 솔루션을 제공합니다.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">🔒</div>
-                <h3>보안 솔루션</h3>
-                <p>사이버 보안 컨설팅부터 보안 시스템 구축까지, 디지털 자산을 안전하게 보호하는 종합 보안 서비스를 제공합니다.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">📊</div>
-                <h3>데이터 분석</h3>
-                <p>빅데이터 처리, 비즈니스 인텔리전스, 데이터 시각화 등을 통해 데이터 기반 의사결정을 지원합니다.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-<section id="team" class="section team" aria-labelledby="team-heading">
-  <h2 id="team-heading" class="fade-in">조직도</h2>
-  <div class="team-grid">
-    <div class="team-member fade-in">
-      <div class="member-avatar">
-        <img
-          loading="lazy"
-          src="https://postfiles.pstatic.net/MjAyNTA2MDhfMjc3/MDAxNzQ5Mzk0NTU4NTU0.REVtBk7BDuKaKQQv-Ri9wa1D8i8AdTEcOhqNfCiBgGMg.e_wUkUZYxwZNNeoUjLxgTX4Bv5d-ylupeV5J53cAiv8g.PNG/%EC%9D%B4%EC%A0%9C%ED%98%95.png?type=w580"
-          alt="이제형 대표이사"
-          class="avatar-image"
-        />
-      </div>
-      <h3 class="member-name">이제형</h3>
-      <p class="member-title">대표이사</p>
-    </div>
-
-    <div class="team-member fade-in">
-      <div class="member-avatar">
-        <img
-          loading="lazy"
-          src="https://postfiles.pstatic.net/MjAyNTA2MDhfNjYg/MDAxNzQ5Mzk0NTE2MDY2.ezL5aNeiEdEvGB9oEPykM88tEQon8jz2_LGMGhtsohgg.Pv3ZPvp2nLndA68wgCHx9L9tb4k_Hh24J6ESKJ9peQog.PNG/%EB%B0%95%ED%83%9C%EC%98%81.png?type=w580"
-          alt="박태영 부사장"
-          class="avatar-image"
-        />
-      </div>
-      <h3 class="member-name">박태영</h3>
-      <p class="member-title">부사장</p>
-    </div>
-
-    <div class="team-member fade-in">
-      <div class="member-avatar">
-        <img
-          loading="lazy"
-          src="https://postfiles.pstatic.net/MjAyNTA2MDhfNzgg/MDAxNzQ5Mzk0NTgzOTk1.FWYyttoYUnNZFcIjyKToNJA-CE9br1VT3UT3SyrqsfAg._NPo_ielo9-5fw90a0aFNkD2P5McgYa_6QTV_1KJH3kg.PNG/%EA%B9%80%EC%A7%80%EC%9B%85.png?type=w580"
-          alt="김지웅 상무"
-          class="avatar-image"
-        />
-      </div>
-      <h3 class="member-name">김지웅</h3>
-      <p class="member-title">상무</p>
-    </div>
-  </div>
-</section>
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2 class="fade-in">연락처</h2>
-        <div class="contact-content">
-            <div class="contact-form fade-in">
-                <h3>프로젝트 문의</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="name">이름</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">이메일</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">회사명</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">프로젝트 내용</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">문의하기</button>
-                </form>
-            </div>
-            <div class="contact-info fade-in">
-                <h3>연락 정보</h3>
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div>
-                        <h4>이메일</h4>
-                        <p>info@manzi.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div>
-                        <h4>전화번호</h4>
-                        <p>031-321-5678</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <h4>주소</h4>
-                        <p>경기도 용인시 처인구<br>원삼면 이원로 1072번지2</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🕐</div>
-                    <div>
-                        <h4>업무시간</h4>
-                        <p>평일 09:00 - 18:00<br>주말 및 공휴일 휴무</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Chat Board Section -->
+    <!-- Interactive Chat Board Section with KakaoTalk Integration -->
     <section id="chat" class="section chat-section">
         <h2 class="fade-in">실시간 문의</h2>
         <div class="chat-container fade-in">
@@ -871,12 +505,27 @@
                 <h3>💬 MANZI 상담센터</h3>
                 <p>궁금한 점이 있으시면 언제든지 문의해 주세요!</p>
             </div>
+
+            <!-- Kakao Connection Status -->
+            <div class="kakao-status">
+                <div id="kakaoStatus">
+                    <span class="status-indicator status-disconnected"></span>
+                    카카오톡 알림: 연결되지 않음
+                </div>
+                <button class="kakao-connect-btn" id="kakaoConnectBtn">
+                    카카오톡 연결하기
+                </button>
+                <button class="kakao-connect-btn" id="kakaoDisconnectBtn" style="display: none; background: #ff6b6b;">
+                    연결 해제
+                </button>
+            </div>
             
             <div class="chat-messages" id="chatMessages">
                 <div class="message admin">
                     <div class="message-bubble">
                         안녕하세요! MANZI입니다. 🙋‍♂️<br>
-                        어떤 도움이 필요하신가요?
+                        어떤 도움이 필요하신가요?<br>
+                        <small style="opacity: 0.8;">💡 카카오톡을 연결하시면 새로운 메시지 알림을 받을 수 있어요!</small>
                     </div>
                     <div class="message-info">MANZI 상담원 • 방금 전</div>
                 </div>
@@ -920,7 +569,14 @@
         </div>
     </footer>
 
+    <!-- Kakao SDK -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
+
     <script>
+        // Kakao SDK 초기화
+        const KAKAO_APP_KEY = '9b6d5fd05721657a5c560eddf461b1bf';
+        Kakao.init(KAKAO_APP_KEY);
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -935,53 +591,163 @@
             });
         });
 
-        // Navbar transparency on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(6, 182, 212, 0.2)';
-            } else {
-                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Notification function
+        function showNotification(message, isError = false) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${isError ? 'error' : ''}`;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span>${isError ? '❌' : '✅'}</span>
+                    <span>${message}</span>
+                </div>
+            `;
             
-            const submitBtn = this.querySelector('.submit-btn');
-            submitBtn.style.transform = 'scale(0.95)';
-            submitBtn.innerHTML = '전송 중...';
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 100);
             
             setTimeout(() => {
-                submitBtn.style.transform = 'scale(1)';
-                submitBtn.innerHTML = '문의하기';
-                alert('문의해 주셔서 감사합니다! 빠른 시일 내에 연락드리겠습니다.');
-                this.reset();
-            }, 2000);
-        });
+                notification.classList.remove('show');
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
 
-        // Interactive Chat Board Functionality
+        // Kakao Login and Notification System
+        class KakaoNotificationSystem {
+            constructor() {
+                this.isConnected = false;
+                this.accessToken = null;
+                this.userInfo = null;
+                this.init();
+            }
+
+            init() {
+                this.checkLoginStatus();
+                this.bindEvents();
+            }
+
+            bindEvents() {
+                document.getElementById('kakaoConnectBtn').addEventListener('click', () => {
+                    this.connectKakao();
+                });
+
+                document.getElementById('kakaoDisconnectBtn').addEventListener('click', () => {
+                    this.disconnectKakao();
+                });
+            }
+
+            checkLoginStatus() {
+                if (Kakao.Auth.getAccessToken()) {
+                    this.accessToken = Kakao.Auth.getAccessToken();
+                    this.getUserInfo();
+                } else {
+                    this.updateConnectionStatus(false);
+                }
+            }
+
+            connectKakao() {
+                Kakao.Auth.login({
+                    success: (response) => {
+                        this.accessToken = response.access_token;
+                        this.getUserInfo();
+                        showNotification('카카오톡이 성공적으로 연결되었습니다!');
+                    },
+                    fail: (error) => {
+                        console.error('Kakao login failed:', error);
+                        showNotification('카카오톡 연결에 실패했습니다.', true);
+                    }
+                });
+            }
+
+            disconnectKakao() {
+                Kakao.Auth.logout(() => {
+                    this.accessToken = null;
+                    this.userInfo = null;
+                    this.updateConnectionStatus(false);
+                    showNotification('카카오톡 연결이 해제되었습니다.');
+                });
+            }
+
+            getUserInfo() {
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: (response) => {
+                        this.userInfo = response;
+                        this.updateConnectionStatus(true);
+                        console.log('User info:', response);
+                    },
+                    fail: (error) => {
+                        console.error('Failed to get user info:', error);
+                        showNotification('사용자 정보를 가져오는데 실패했습니다.', true);
+                    }
+                });
+            }
+
+            updateConnectionStatus(connected) {
+                this.isConnected = connected;
+                const statusElement = document.getElementById('kakaoStatus');
+                const connectBtn = document.getElementById('kakaoConnectBtn');
+                const disconnectBtn = document.getElementById('kakaoDisconnectBtn');
+                const indicator = statusElement.querySelector('.status-indicator');
+
+                if (connected) {
+                    const nickname = this.userInfo?.properties?.nickname || '사용자';
+                    statusElement.innerHTML = `
+                        <span class="status-indicator status-connected"></span>
+                        카카오톡 알림: 연결됨 (${nickname}님)
+                    `;
+                    connectBtn.style.display = 'none';
+                    disconnectBtn.style.display = 'inline-block';
+                } else {
+                    statusElement.innerHTML = `
+                        <span class="status-indicator status-disconnected"></span>
+                        카카오톡 알림: 연결되지 않음
+                    `;
+                    connectBtn.style.display = 'inline-block';
+                    disconnectBtn.style.display = 'none';
+                }
+            }
+
+            async sendKakaoNotification(message, userMessage) {
+                if (!this.isConnected || !this.accessToken) {
+                    console.log('Kakao not connected, skipping notification');
+                    return;
+                }
+
+                try {
+                    // 카카오톡 메시지 템플릿
+                    const templateObject = {
+                        object_type: 'text',
+                        text: `🔔 MANZI 웹사이트 새 메시지\n\n💬 고객 메시지:\n"${userMessage}"\n\n🤖 자동 응답:\n"${message}"\n\n⏰ ${new Date().toLocaleString('ko-KR')}`,
+                        link: {
+                            web_url: window.location.href,
+                            mobile_web_url: window.location.href
+                        }
+                    };
+
+                    // 나에게 메시지 보내기
+                    Kakao.API.request({
+                        url: '/v2/api/talk/memo/default/send',
+                        data: {
+                            template_object: templateObject
+                        },
+                        success: (response) => {
+                            console.log('Kakao notification sent successfully:', response);
+                            showNotification('카카오톡 알림이 발송되었습니다! 📱');
+                        },
+                        fail: (error) => {
+                            console.error('Failed to send Kakao notification:', error);
+                            showNotification('카카오톡 알림 발송에 실패했습니다.', true);
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error sending Kakao notification:', error);
+                    showNotification('카카오톡 알림 발송 중 오류가 발생했습니다.', true);
+                }
+            }
+        }
+
+        // Enhanced Chat Board with Kakao Integration
         class ChatBoard {
             constructor() {
                 this.chatMessages = document.getElementById('chatMessages');
@@ -989,6 +755,7 @@
                 this.sendBtn = document.getElementById('sendBtn');
                 this.typingIndicator = document.getElementById('typingIndicator');
                 this.quickQuestions = document.querySelectorAll('.quick-question');
+                this.kakaoSystem = new KakaoNotificationSystem();
                 
                 this.responses = {
                     '웹 개발 비용이 궁금해요': '웹 개발 비용은 프로젝트 규모와 요구사항에 따라 달라집니다. 💰\n\n기본 웹사이트: 300만원~500만원\n중급 웹사이트: 500만원~1000만원\n고급 웹사이트: 1000만원 이상\n\n정확한 견적을 위해 무료 상담을 받아보세요!',
@@ -1063,7 +830,7 @@
                 this.scrollToBottom();
             }
 
-            generateResponse(userMessage) {
+            async generateResponse(userMessage) {
                 let response = this.findBestResponse(userMessage);
                 
                 if (!response) {
@@ -1071,6 +838,11 @@
                 }
 
                 this.addMessage(response, 'admin');
+
+                // 카카오톡 알림 발송
+                if (this.kakaoSystem.isConnected) {
+                    await this.kakaoSystem.sendKakaoNotification(response, userMessage);
+                }
             }
 
             findBestResponse(message) {
@@ -1098,6 +870,10 @@
                 
                 if (lowerMessage.includes('AI') || lowerMessage.includes('인공지능') || lowerMessage.includes('머신러닝')) {
                     return 'AI/머신러닝 분야의 전문성을 보유하고 있습니다! 🤖\n\n✅ 데이터 분석 및 예측 모델\n✅ 자연어 처리 (NLP)\n✅ 컴퓨터 비전\n✅ 추천 시스템\n✅ 챗봇 개발\n\n구체적인 AI 프로젝트가 있으시다면 상담받아보세요!';
+                }
+
+                if (lowerMessage.includes('카카오') || lowerMessage.includes('알림')) {
+                    return '카카오톡 알림 기능을 연결하시면 새로운 메시지가 올 때마다 실시간으로 알림을 받을 수 있어요! 📱\n\n위의 "카카오톡 연결하기" 버튼을 클릭해서 연결해보세요.';
                 }
 
                 return null;
@@ -1130,10 +906,50 @@
             }
         }
 
+        // Navbar transparency on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(6, 182, 212, 0.2)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
         // Initialize chat board when page loads
         window.addEventListener('load', () => {
             new ChatBoard();
         });
+
+        // Demo function to test notifications
+        function testNotification() {
+            showNotification('테스트 알림입니다!');
+        }
+
+        // Add some helpful console messages
+        console.log('🚀 MANZI 웹사이트가 로드되었습니다!');
+        console.log('💬 채팅 기능과 카카오톡 알림이 활성화되었습니다.');
+        console.log('📱 카카오톡을 연결하면 실시간 알림을 받을 수 있습니다.');
     </script>
 </body>
 </html>
